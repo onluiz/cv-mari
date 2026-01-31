@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Heart, MapPin, Mail, BookOpen, Activity } from 'lucide-react'
+import { Heart, MapPin, Mail, BookOpen, Activity, ChevronUp } from 'lucide-react'
 import cvPdf from './assets/CV_Mariana .pdf'
 import './App.css'
 
@@ -47,8 +47,8 @@ function App() {
         </header>
 
         <div className="profile-grid">
-          {/* COLUNA DA ESQUERDA: STATUS */}
-          <aside>
+          {/* COLUNA DA ESQUERDA: STATUS & SKILLS */}
+          <div className="profile-info">
             <div className="stats-card">
               <div className="pixel-avatar no-print">
                 👾
@@ -109,8 +109,10 @@ function App() {
                   {copyText}
                 </button>
                 <a 
-                  href={cvPdf}
+                  href={import.meta.env.VITE_PDF_URL || cvPdf}
                   download="CV_Mariana.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-retro btn-retro--download-pdf"
                 >
                   Baixar PDF
@@ -157,7 +159,9 @@ function App() {
               </div>
 
             </div>
+          </div>
 
+          <div className="inventory-section">
             <h2 style={{ fontSize: '1rem', width: '100%', textAlign: 'center' }}>INVENTORY</h2>
             <div className="inventory-grid">
               <div className="item-slot">
@@ -175,8 +179,7 @@ function App() {
                 </div>
               </div>
             </div>
-
-          </aside>
+          </div>
 
           {/* COLUNA DA DIREITA: QUEST LOG */}
           <section className="main-content">
@@ -290,8 +293,17 @@ function App() {
           </section>
         </div>
 
-        <footer style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.8rem', opacity: 0.7 }}>
-          <p>GAME OVER? PRESS F5 TO RESTART | INSERT COIN TO HIRE</p>
+        <footer style={{ marginTop: '2.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', marginBottom: '1rem' }}>
+          <button 
+            className="btn-retro no-print" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            style={{ width: 'auto', padding: '10px 15px', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <ChevronUp size={16} /> VOLTAR AO TOPO
+          </button>
+          <div style={{ opacity: 0.7, fontSize: '0.8rem' }}>
+            <p>GAME OVER? PRESS F5 TO RESTART | INSERT COIN TO HIRE</p>
+          </div>
         </footer>
       </div>
     </>

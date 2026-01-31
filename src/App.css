@@ -12,6 +12,18 @@
   padding: 2rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Header */
@@ -20,6 +32,20 @@ header {
   border-bottom: var(--pixel-border);
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
+}
+
+.hearts svg {
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 h1 {
@@ -55,11 +81,31 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
+  grid-template-areas:
+    "side main"
+    "inv main";
+}
+
+.profile-info {
+  grid-area: side;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.inventory-section {
+  grid-area: inv;
+  display: none;
 }
 
 @media (max-width: 768px) {
   .profile-grid {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "side"
+      "main"
+      "inv";
   }
   h1 {
     font-size: 1.2rem;
@@ -150,6 +196,17 @@ h2 {
   background-color: var(--dark-pink);
   width: 90%; /* Valor padrão */
   position: relative;
+  animation: fillBar 1.5s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
+  transform-origin: left;
+}
+
+@keyframes fillBar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
 }
 
 /* Brilho na barra de HP */
@@ -170,12 +227,13 @@ h2 {
   padding: 1rem;
   margin-bottom: 1rem;
   position: relative;
-  transition: transform 0.1s;
+  transition: all 0.2s ease;
 }
 
 .quest-item:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0px rgba(89, 13, 34, 0.5);
+  transform: translateX(4px);
+  border-left: 6px solid var(--dark-pink);
+  box-shadow: 4px 4px 0px rgba(89, 13, 34, 0.2);
 }
 
 .quest-header {
