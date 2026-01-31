@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Heart, MapPin, Mail, BookOpen, Activity } from 'lucide-react'
+import cvPdf from './assets/CV_Mariana .pdf'
 import './App.css'
 
 const WhatsAppIcon = ({ size = 16, color = "#25D366" }) => (
@@ -30,18 +31,18 @@ function App() {
 
   return (
     <>
-      <div className="scanlines"></div>
+      <div className="scanlines no-print"></div>
 
       <div className="game-container">
         <header>
-          <div className="hearts">
+          <div className="hearts no-print">
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
           </div>
-          <h1>MARIANA SANTANA<span className="blink">_</span></h1>
+          <h1>MARIANA SANTANA<span className="blink no-print">_</span></h1>
           <p className="subtitle">PLAYER LVL. 29 | CLASSE: PÓS-VENDA</p>
         </header>
 
@@ -49,7 +50,7 @@ function App() {
           {/* COLUNA DA ESQUERDA: STATUS */}
           <aside>
             <div className="stats-card">
-              <div className="pixel-avatar">
+              <div className="pixel-avatar no-print">
                 👾
               </div>
               
@@ -66,7 +67,7 @@ function App() {
                 <span>100%</span>
               </div>
               
-              <hr style={{ borderTop: '2px dashed var(--accent-purple)', margin: '15px 0' }} />
+              <hr className="no-print" style={{ borderTop: '2px dashed var(--accent-purple)', margin: '15px 0' }} />
 
               <div className="contact-info">
                 <div className="contact-item">
@@ -95,19 +96,25 @@ function App() {
                 </div>
               </div>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div className="no-print" style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '1rem' }}>
                 <a 
                   href="https://wa.me/5548984863976" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="btn-retro"
-                  style={{ backgroundColor: '#25D366', color: 'white', textShadow: '1px 1px 0px var(--accent-purple)' }}
+                  className="btn-retro btn-retro--open-whatsapp"
                 >
                   WhatsApp
                 </a>
                 <button className="btn-retro" onClick={copyEmail}>
                   {copyText}
                 </button>
+                <a 
+                  href={cvPdf}
+                  download="CV_Mariana.pdf"
+                  className="btn-retro btn-retro--download-pdf"
+                >
+                  Baixar PDF
+                </a>
               </div>
             </div>
 

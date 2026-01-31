@@ -228,14 +228,31 @@ h2 {
   transition: all 0.1s;
   text-decoration: none;
   display: inline-block;
-  margin-top: 1rem;
   width: 100%;
   text-align: center;
+  /* Normalização para garantir altura igual em tag <a> e <button> */
+  box-sizing: border-box;
+  line-height: 1;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .btn-retro:active {
   box-shadow: 0 0 0 var(--accent-purple);
   transform: translateY(4px);
+}
+
+.btn-retro--open-whatsapp {
+  background-color: #25d366;
+  color: white;
+  /* text-shadow: 1px 1px 0px var(--accent-purple); */
+}
+
+.btn-retro--download-pdf {
+  background-color: rgb(169 20 62);
+  color: white;
+  /* text-shadow: 1px 1px 0px var(--accent-purple); */
 }
 
 /* Inventory (Formação) */
@@ -298,5 +315,120 @@ h2 {
 @keyframes blinker {
   50% {
     opacity: 0;
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .game-container {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem !important;
+    background: white !important;
+  }
+
+  header {
+    border-bottom: 2px solid black !important;
+  }
+
+  h1 {
+    font-family: Arial, sans-serif !important;
+    color: black !important;
+    text-shadow: none !important;
+    font-size: 24pt !important;
+  }
+
+  h2 {
+    font-family: Arial, sans-serif !important;
+    color: black !important;
+    background: #f0f0f0 !important;
+    border: 1px solid black !important;
+    text-shadow: none !important;
+    font-size: 14pt !important;
+    padding: 2px 5px !important;
+  }
+
+  .subtitle {
+    color: #444 !important;
+    font-size: 14pt !important;
+  }
+
+  .stats-card,
+  .quest-item,
+  .item-slot,
+  .item-inner {
+    box-shadow: none !important;
+    border: 1px solid #eee !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  .hp-bar-bg {
+    background: #eee !important;
+    border: 1px solid #000 !important;
+  }
+
+  .hp-bar-fill {
+    background: #999 !important;
+  }
+
+  .quest-title {
+    font-family: Arial, sans-serif !important;
+    font-weight: bold !important;
+    color: black !important;
+    font-size: 11pt !important;
+  }
+
+  .quest-date {
+    background: transparent !important;
+    color: black !important;
+    font-weight: bold !important;
+  }
+
+  .quest-desc li::before {
+    color: black !important;
+  }
+
+  .stat-row {
+    border-bottom-color: #eee !important;
+  }
+
+  .item-slot {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ddd !important;
+  }
+
+  .item-inner {
+    border: none !important;
+  }
+
+  .item-inner i,
+  .contact-item i {
+    color: black !important;
+  }
+
+  aside,
+  section {
+    color: black !important;
+  }
+
+  /* Force standard font for content */
+  .stat-label,
+  .contact-item,
+  .skill-name,
+  .quest-desc,
+  .quest-date,
+  strong,
+  p,
+  span,
+  li,
+  small {
+    font-family: Arial, sans-serif !important;
+    font-size: 10pt !important;
   }
 }
