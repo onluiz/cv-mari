@@ -108,10 +108,16 @@ h2 {
 
 .contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 8px;
-  word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.contact-item span,
+.contact-item a {
+  flex: 1;
 }
 
 /* Seção Principal (Direita) */

@@ -25,8 +25,8 @@ function App() {
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
             <Heart fill="#FB6F92" size={24} />
-            <Heart size={24} />
-            <Heart size={24} />
+            <Heart fill="#FB6F92" size={24} />
+            <Heart fill="#FB6F92" size={24} />
           </div>
           <h1>MARIANA SANTANA<span className="blink">_</span></h1>
           <p className="subtitle">PLAYER LVL. 29 | CLASSE: PÓS-VENDA</p>
@@ -41,16 +41,16 @@ function App() {
               </div>
               
               <div className="stat-row">
-                <span className="stat-label">STR (Força)</span>
-                <span>08</span>
+                <span className="stat-label">CMN (Comunicação)</span>
+                <span>100%</span>
               </div>
               <div className="stat-row">
                 <span className="stat-label">INT (Inteligência)</span>
-                <span>18</span>
+                <span>100%</span>
               </div>
               <div className="stat-row">
                 <span className="stat-label">CHA (Carisma)</span>
-                <span>20</span>
+                <span>100%</span>
               </div>
               
               <hr style={{ borderTop: '2px dashed var(--accent-purple)', margin: '15px 0' }} />
@@ -66,7 +66,12 @@ function App() {
                 </div>
                 <div className="contact-item">
                   <Mail size={16} />
-                  <span style={{ fontSize: '0.9em' }}>marianasantana...</span>
+                  <a 
+                    href="mailto:marianasantanadasilva94@gmail.com" 
+                    style={{ fontSize: '0.85em', color: 'inherit', textDecoration: 'none' }}
+                  >
+                    marianasantanadasilva94@gmail.com
+                  </a>
                 </div>
               </div>
               
@@ -140,7 +145,7 @@ function App() {
             
             <div style={{ background: 'var(--white)', border: '2px solid var(--accent-purple)', padding: '10px', marginBottom: '10px' }}>
               <strong style={{ color: 'var(--dark-pink)' }}>🎯 OBJETIVO ATUAL:</strong>
-              <p style={{ margin: '5px 0 0 0' }}>Recepcionista, Telefonista ou Auxiliar Administrativo.</p>
+              <p style={{ margin: '5px 0 0 0' }}>Pós-vendas, Recepcionista, Telefonista ou Auxiliar Administrativo.</p>
             </div>
 
             <h2>QUEST LOG (EXPERIÊNCIA)</h2>
