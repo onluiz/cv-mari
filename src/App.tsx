@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Heart, MapPin, Mail, BookOpen, Activity, ChevronUp } from 'lucide-react'
-import cvPdf from './assets/CV_Mariana .pdf'
+import cvPdf from './assets/CV_Mariana.pdf'
 import './App.css'
 
 const WhatsAppIcon = ({ size = 16, color = "#25D366" }) => (
