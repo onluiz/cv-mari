@@ -237,8 +237,12 @@ function App() {
             <small>bolachas</small>
           </div>
           <div className="brand-card emporium">
-            EMPORIUM
-            <small>NUT</small>
+            EMPORIUMNUT
+            <small>loja de suplementação</small>
+          </div>
+          <div className="brand-card bazinga">
+            BAZINGA
+            <small>dog house</small>
           </div>
         </div>
       </section>

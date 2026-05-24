@@ -521,9 +521,9 @@ section {
 
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.5rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -560,6 +560,7 @@ section {
 .brand-card.gpower { border-color: #ff6f00; color: #ff6f00; }
 .brand-card.biscuit { border-color: #795548; color: #795548; }
 .brand-card.emporium { border-color: #2e7d32; color: #2e7d32; }
+.brand-card.bazinga { border-color: #1565c0; color: #1565c0; }
 
 /* ==============================
    CONTACT
@@ -671,7 +672,7 @@ section {
   }
 
   .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .gallery-grid {
@@ -718,7 +719,7 @@ section {
   }
 
   .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .contact-grid {
