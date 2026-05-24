@@ -72,7 +72,7 @@ function App() {
         </div>
         <div className="hero-content">
           <div className="brand-logo">
-            eusantana<span className="brand-suffix">Mari</span>
+            eusantana<span className="brand-suffix">mari</span>
           </div>
           <div className="midia-kit-tag">MÍDIA KIT</div>
           <div className="niches">
@@ -226,11 +226,11 @@ function App() {
         <div className="brands-grid">
           <div className="brand-card bebloom">
             BEBLOOM
-            <small>beauty fitness</small>
+            <small>moda fitness</small>
           </div>
           <div className="brand-card gpower">
             GPOWER
-            <small>suplementos</small>
+            <small>imports</small>
           </div>
           <div className="brand-card biscuit">
             BISCUIT

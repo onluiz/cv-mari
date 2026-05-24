@@ -379,13 +379,6 @@ section {
   font-weight: 700;
   color: var(--navy);
   letter-spacing: 0.3px;
-  transition: all 0.2s;
-  cursor: default;
-}
-
-.content-item:hover {
-  background: var(--pink-light);
-  border-color: var(--pink);
 }
 
 .content-icon {
