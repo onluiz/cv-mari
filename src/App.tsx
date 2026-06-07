@@ -220,6 +220,14 @@ function App() {
         <p className="authenticity-quote">Autenticidade é o que me conecta.</p>
       </section>
 
+      {/* PROPOSTA INICIAL */}
+      <section className="proposal-section">
+        <div className="proposal-content">
+          <p>Neste primeiro contato com as marcas, proponho iniciarmos através de uma <strong>parceria por permuta</strong>. Dessa forma, teremos a oportunidade de avaliar se existe uma conexão genuína entre a marca, o produto e o meu público, além de permitir que ambas as partes conheçam melhor o trabalho uma da outra.</p>
+          <p>Acredito que as melhores parcerias são construídas com <strong>autenticidade e confiança</strong>. Por isso, após essa etapa inicial e conforme formos crescendo juntos, podemos avaliar os resultados obtidos e negociar futuras ações e valores de forma alinhada e vantajosa para ambos.</p>
+        </div>
+      </section>
+
       {/* MARCAS */}
       <section className="brands-section">
         <h2 className="section-title">MARCAS QUE JÁ FAZEM PARTE</h2>
