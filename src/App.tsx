@@ -186,8 +186,8 @@ function App() {
           <img src="/images/action1.jpg" alt="CrossFit Open" />
           <img src="/images/action2.jpg" alt="Aula coletiva" />
           <img src="/images/lifestyle.jpg" alt="Lifestyle" />
-          <img src="/images/after-front.jpg" alt="Evolução — frente" />
-          <img src="/images/after-back.jpg" alt="Evolução — costas" />
+          <img src="/images/crossfit.jpg" alt="Treino CrossFit" />
+          <img src="/images/hetero_top.jpg" alt="Treino academia" />
         </div>
       </section>
 
