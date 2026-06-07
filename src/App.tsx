@@ -182,7 +182,7 @@ function App() {
       <section className="gallery-section">
         <h2 className="section-title">GALERIA</h2>
         <div className="gallery-grid">
-          <img src="/images/hero.jpg" alt="Mariana no ginásio" />
+          <img src="/images/campeonato_open.jpg" alt="Mariana no ginásio" />
           <img src="/images/action1.jpg" alt="CrossFit Open" />
           <img src="/images/action2.jpg" alt="Aula coletiva" />
           <img src="/images/lifestyle.jpg" alt="Lifestyle" />
