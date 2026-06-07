@@ -688,6 +688,10 @@ section {
     max-height: 420px;
   }
 
+  .hero-photo img {
+    object-position: 50% 15%;
+  }
+
   .hero-content {
     padding: 2rem 1.5rem;
   }
