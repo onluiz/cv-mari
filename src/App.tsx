@@ -282,6 +282,10 @@ function App() {
             BAZINGA
             <small>dog house</small>
           </div>
+          <div className="brand-card raavi">
+            RAAVI
+            <small>dermocosmético</small>
+          </div>
         </div>
       </section>
 
