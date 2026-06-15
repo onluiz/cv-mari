@@ -469,19 +469,17 @@ section {
 }
 
 .video-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  justify-content: center;
-  max-width: 780px;
+  max-width: 740px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
 .video-card {
-  flex: 1 1 280px;
-  max-width: 348px;
+  width: 100%;
   aspect-ratio: 9/16;
   border-radius: 20px;
   overflow: hidden;
@@ -491,9 +489,6 @@ section {
     0 8px 40px rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .video-card:hover {
@@ -511,15 +506,10 @@ section {
   display: block;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .video-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .video-card {
-    max-width: 310px;
-    width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 340px;
   }
 }
 
