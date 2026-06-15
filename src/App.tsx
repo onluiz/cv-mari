@@ -191,6 +191,36 @@ function App() {
         </div>
       </section>
 
+      {/* VÍDEOS */}
+      <section className="video-section">
+        <h2 className="section-title pink">VÍDEOS</h2>
+        <p className="video-subtitle">Conteúdos em destaque</p>
+        <div className="video-grid">
+          <div className="video-card">
+            <video
+              src="/videos/gpower.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/raavi.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* TRANSFORMAÇÃO */}
       <section className="transformation-section">
         <h2 className="section-title">MINHA TRANSFORMAÇÃO</h2>
