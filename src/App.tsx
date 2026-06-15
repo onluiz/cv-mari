@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   MapPin, Mail, Heart, Star, Check,
   Users, Eye, TrendingUp, Activity,
@@ -54,6 +54,13 @@ const partnershipFormats = [
 
 function App() {
   const [copyText, setCopyText] = useState('Copiar E-mail')
+
+  useEffect(() => {
+    const win = window as any
+    if (win.instgrm) {
+      win.instgrm.Embeds.process()
+    }
+  }, [])
 
   const copyEmail = () => {
     navigator.clipboard.writeText('marianasantanadasilva94@gmail.com').then(() => {
@@ -194,15 +201,25 @@ function App() {
       {/* VÍDEOS */}
       <section className="video-section">
         <h2 className="section-title pink">VÍDEOS</h2>
-        <p className="video-subtitle">Em breve novos conteúdos</p>
+        <p className="video-subtitle">Conteúdos em destaque</p>
         <div className="video-grid">
-          <div className="video-placeholder">
-            <div className="video-play-icon">&#9654;</div>
-            <span>VÍDEO</span>
+          <div className="video-embed-wrapper">
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DYvJ4onyQjY/"
+              data-instgrm-version="14"
+            >
+              <a href="https://www.instagram.com/reel/DYvJ4onyQjY/">Ver no Instagram</a>
+            </blockquote>
           </div>
-          <div className="video-placeholder">
-            <div className="video-play-icon">&#9654;</div>
-            <span>VÍDEO</span>
+          <div className="video-embed-wrapper">
+            <blockquote
+              className="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DZfcG71Rd-y/"
+              data-instgrm-version="14"
+            >
+              <a href="https://www.instagram.com/reel/DZfcG71Rd-y/">Ver no Instagram</a>
+            </blockquote>
           </div>
         </div>
       </section>
