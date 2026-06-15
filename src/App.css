@@ -427,7 +427,33 @@ section {
    VIDEOS
    ============================== */
 .video-section {
-  background: var(--navy);
+  background: linear-gradient(160deg, #0b0e17 0%, var(--navy) 55%, #130d1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: -120px;
+  right: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,30,140,0.11) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.video-section::after {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  bottom: -80px;
+  left: -80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,30,140,0.07) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .video-subtitle {
@@ -437,33 +463,59 @@ section {
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: -1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .video-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   justify-content: center;
-  max-width: 1100px;
+  max-width: 780px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
-.video-embed-wrapper {
-  flex: 1 1 300px;
-  max-width: 500px;
-}
-
-.video-embed-wrapper .instagram-media {
-  margin: 0 auto !important;
-  border-radius: 12px !important;
+.video-card {
+  flex: 1 1 280px;
+  max-width: 348px;
+  border-radius: 20px;
   overflow: hidden;
+  background: #000;
+  border: 1.5px solid rgba(233, 30, 140, 0.28);
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s;
 }
 
-@media (max-width: 700px) {
-  .video-embed-wrapper {
-    flex: 1 1 100%;
-    max-width: 100%;
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.65),
+    0 0 36px rgba(233, 30, 140, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+.reel-video {
+  width: 100%;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .video-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video-card {
+    max-width: 310px;
+    width: 100%;
   }
 }
 
