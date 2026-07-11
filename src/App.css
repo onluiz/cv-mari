@@ -48,7 +48,7 @@
 
 .brand-suffix {
   font-family: 'Pacifico', cursive;
-  color: var(--gold);
+  color: var(--pink-dark);
   font-size: 2.6rem;
   letter-spacing: 0;
 }
@@ -180,14 +180,18 @@ section {
 }
 
 .section-title.pink {
-  color: var(--pink);
+  color: var(--white);
+}
+
+.section-title.pink::after {
+  background: var(--white);
 }
 
 /* ==============================
    NUMBERS
    ============================== */
 .numbers-section {
-  background: var(--navy);
+  background: var(--pink);
   color: var(--white);
 }
 
@@ -420,14 +424,14 @@ section {
   aspect-ratio: 9/16;
   object-fit: cover;
   border-radius: 10px;
-  background: #000;
+  background: #31072f;
 }
 
 /* ==============================
    VIDEOS
    ============================== */
 .video-section {
-  background: linear-gradient(160deg, #0b0e17 0%, var(--navy) 55%, #130d1a 100%);
+  background: var(--pink);
   position: relative;
   overflow: hidden;
 }
@@ -440,7 +444,7 @@ section {
   top: -120px;
   right: -120px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(233,30,140,0.11) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(126,40,40,0.11) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -452,7 +456,7 @@ section {
   bottom: -80px;
   left: -80px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(233,30,140,0.07) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(126,40,40,0.07) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -483,8 +487,8 @@ section {
   aspect-ratio: 9/16;
   border-radius: 20px;
   overflow: hidden;
-  background: #0a0a0f;
-  border: 1.5px solid rgba(233, 30, 140, 0.28);
+  background: #31072f;
+  border: 1.5px solid rgba(126, 40, 40, 0.28);
   box-shadow:
     0 8px 40px rgba(0, 0, 0, 0.55),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04);
@@ -495,7 +499,7 @@ section {
   transform: translateY(-6px);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.65),
-    0 0 36px rgba(233, 30, 140, 0.2),
+    0 0 36px rgba(126, 40, 40, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.07);
 }
 
@@ -605,7 +609,7 @@ section {
    PROPOSAL
    ============================== */
 .proposal-section {
-  background: var(--navy);
+  background: var(--pink);
   padding: 3rem 2rem;
 }
 
@@ -662,7 +666,7 @@ section {
 .brand-card:hover {
   border-color: var(--pink);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(233, 30, 140, 0.12);
+  box-shadow: 0 8px 20px rgba(126, 40, 40, 0.12);
 }
 
 .brand-card small {
@@ -675,18 +679,18 @@ section {
   text-transform: uppercase;
 }
 
-.brand-card.bebloom { border-color: #9c27b0; color: #9c27b0; }
-.brand-card.gpower { border-color: #ff6f00; color: #ff6f00; }
-.brand-card.biscuit { border-color: #795548; color: #795548; }
-.brand-card.emporium { border-color: #2e7d32; color: #2e7d32; }
-.brand-card.bazinga { border-color: #1565c0; color: #1565c0; }
-.brand-card.raavi { border-color: #c2185b; color: #c2185b; }
+.brand-card.bebloom { border-color: #451130; color: #451130; }
+.brand-card.gpower { border-color: #7e2828; color: #7e2828; }
+.brand-card.biscuit { border-color: #530707; color: #530707; }
+.brand-card.emporium { border-color: #272351; color: #272351; }
+.brand-card.bazinga { border-color: #272351; color: #272351; }
+.brand-card.raavi { border-color: #530707; color: #530707; }
 
 /* ==============================
    CONTACT
    ============================== */
 .contact-section {
-  background: var(--navy);
+  background: var(--pink);
   color: var(--white);
   text-align: center;
 }
@@ -699,7 +703,7 @@ section {
   font-size: 2rem;
   font-weight: 800;
   font-family: 'Pacifico', cursive;
-  color: var(--gold);
+  color: #fbbbad;
   margin-bottom: 0.5rem;
 }
 
@@ -758,8 +762,8 @@ section {
    FOOTER
    ============================== */
 .footer {
-  background: #111827;
-  color: rgba(255,255,255,0.4);
+  background: var(--gray);
+  color: #c69fa5;
   text-align: center;
   padding: 1.2rem;
   font-size: 0.78rem;

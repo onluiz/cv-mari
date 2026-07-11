@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap');
 
 :root {
-  --pink: #e91e8c;
-  --pink-dark: #c2185b;
-  --pink-light: #fce4f3;
-  --pink-mid: #f48fb1;
-  --navy: #1b2238;
-  --gold: #f5c518;
+  --pink: #7e2828;
+  --pink-dark: #530707;
+  --pink-light: #f2e6e6;
+  --pink-mid: rgba(255, 255, 255, 0.85);
+  --navy: #272351;
+  --gold: #ab94a2;
   --white: #ffffff;
-  --gray: #555;
-  --gray-light: #f7f7f7;
-  --text: #222;
+  --gray: #451130;
+  --gray-light: #ededf1;
+  --text: #31072f;
 }
 
 * {
