@@ -39,16 +39,17 @@
 
 /* Logo */
 .brand-logo {
+  font-family: 'Fraunces', serif;
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 1;
-  color: var(--navy);
+  color: var(--pink);
   letter-spacing: -1px;
 }
 
 .brand-suffix {
-  font-family: 'Pacifico', cursive;
-  color: var(--pink-dark);
+  font-family: 'Fraunces', serif;
+  color: #fbbbad;
   font-size: 2.6rem;
   letter-spacing: 0;
 }
@@ -81,6 +82,7 @@
 }
 
 .hero-quote {
+  font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 1rem;
   color: var(--navy);
@@ -160,6 +162,7 @@ section {
 }
 
 .section-title {
+  font-family: 'Fraunces', serif;
   font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 2px;
@@ -354,13 +357,13 @@ section {
 }
 
 .audience-highlight {
+  font-family: 'Fraunces', serif;
   margin-top: 1.5rem;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 800;
   color: var(--pink);
   letter-spacing: 2px;
-  opacity: 0.2;
 }
 
 /* Content Grid */
@@ -597,6 +600,7 @@ section {
 }
 
 .authenticity-quote {
+  font-family: 'Fraunces', serif;
   text-align: center;
   font-style: italic;
   font-size: 1.1rem;
@@ -702,7 +706,7 @@ section {
 .contact-cta h2 {
   font-size: 2rem;
   font-weight: 800;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Fraunces', serif;
   color: #fbbbad;
   margin-bottom: 0.5rem;
 }
@@ -745,7 +749,7 @@ section {
   border: none;
   border-radius: 50px;
   padding: 12px 32px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
