@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import {
-  MapPin, Mail, Heart, Star, Check,
+  MapPin, Mail, Heart, Star, Check, Sparkles, Copy,
   Users, Eye, TrendingUp, Activity,
-  Dumbbell, Zap, Scale,
+  Dumbbell, Zap, Scale, ChevronLeft, ChevronRight,
   UtensilsCrossed, Leaf, Calendar, Flame, Smile, Video,
 } from 'lucide-react'
 import './App.css'
@@ -54,6 +54,15 @@ const partnershipFormats = [
 
 function App() {
   const [copyText, setCopyText] = useState('Copiar E-mail')
+  const galleryRef = useRef<HTMLDivElement>(null)
+
+  const scrollGallery = (direction: number) => {
+    const el = galleryRef.current
+    if (!el) return
+    const card = el.querySelector('img')
+    const cardWidth = card ? card.getBoundingClientRect().width + 12 : 260
+    el.scrollBy({ left: direction * cardWidth, behavior: 'smooth' })
+  }
 
   const copyEmail = () => {
     navigator.clipboard.writeText('marianasantanadasilva94@gmail.com').then(() => {
@@ -68,7 +77,7 @@ function App() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-photo">
-          <img src="/images/hero.jpg" alt="Mariana Santana @eusantanamari" />
+          <img src="/images/hero.jpeg" alt="Mariana Santana @eusantanamari" />
         </div>
         <div className="hero-content">
           <div className="brand-logo">
@@ -89,10 +98,11 @@ function App() {
             <Heart size={14} fill="currentColor" />
           </blockquote>
           <p className="hero-bio">
-            Sou criadora de conteúdo que inspira através da minha rotina real:
-            fitness, alimentação equilibrada, disciplina e amor próprio.
-            Pós-bariátrica + DM1, compartilho leveza, verdade e motivação
-            para transformar vidas.
+            Sou a Mariana Santana, criadora de conteúdo apaixonada por
+            compartilhar uma rotina real, leve e inspiradora. Entre o
+            CrossFit, o skincare, a fé e minha vivência como diabética tipo 1
+            e pós-bariátrica, transformo experiências em conexão,
+            autenticidade e influência com propósito.
           </p>
           <div className="values-row">
             {values.map(v => (
@@ -116,18 +126,18 @@ function App() {
         <div className="numbers-grid">
           <div className="number-card">
             <div className="number-icon"><Users size={28} /></div>
-            <div className="number-value">1.074</div>
+            <div className="number-value">1.191</div>
             <div className="number-label">SEGUIDORES</div>
           </div>
           <div className="number-card">
             <div className="number-icon"><Eye size={28} /></div>
-            <div className="number-value">+5 MIL</div>
-            <div className="number-label">VIEWS STORIES</div>
+            <div className="number-value">8K+</div>
+            <div className="number-label">VISUALIZAÇÕES NOS REELS</div>
           </div>
           <div className="number-card">
             <div className="number-icon"><TrendingUp size={28} /></div>
-            <div className="number-value">15K+</div>
-            <div className="number-label">ALCANCE MÉDIO MENSAL</div>
+            <div className="number-value">143K+</div>
+            <div className="number-label">VISUALIZAÇÕES MENSAIS</div>
           </div>
           <div className="number-card">
             <div className="number-icon"><Activity size={28} /></div>
@@ -181,13 +191,33 @@ function App() {
       {/* GALERIA DE FOTOS */}
       <section className="gallery-section">
         <h2 className="section-title">GALERIA</h2>
-        <div className="gallery-grid">
-          <img src="/images/campeonato_open.jpg" alt="Mariana no ginásio" />
-          <img src="/images/action1.jpg" alt="CrossFit Open" />
-          <img src="/images/action2.jpg" alt="Aula coletiva" />
-          <img src="/images/lifestyle.jpg" alt="Lifestyle" />
-          <img src="/images/crossfit.jpg" alt="Treino CrossFit" />
-          <img src="/images/hetero_top.jpg" alt="Treino academia" />
+        <div className="gallery-carousel-wrapper">
+          <button
+            className="carousel-btn prev"
+            onClick={() => scrollGallery(-1)}
+            aria-label="Foto anterior"
+          >
+            <ChevronLeft size={20} />
+          </button>
+          <div className="gallery-carousel" ref={galleryRef}>
+            <img src="/images/gallery/foto1.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto2.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto3.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto4.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto5.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto6.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto7.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto8.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto9.jpeg" alt="Mariana Santana" />
+            <img src="/images/gallery/foto10.jpeg" alt="Mariana Santana" />
+          </div>
+          <button
+            className="carousel-btn next"
+            onClick={() => scrollGallery(1)}
+            aria-label="Próxima foto"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
       </section>
 
@@ -196,28 +226,6 @@ function App() {
         <h2 className="section-title pink">VÍDEOS</h2>
         <p className="video-subtitle">Conteúdos em destaque</p>
         <div className="video-grid">
-          <div className="video-card">
-            <video
-              src="/videos/gpower.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              className="reel-video"
-            />
-          </div>
-          <div className="video-card">
-            <video
-              src="/videos/raavi.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              className="reel-video"
-            />
-          </div>
           <div className="video-card">
             <video
               src="/videos/video1.mp4"
@@ -273,6 +281,28 @@ function App() {
               className="reel-video"
             />
           </div>
+          <div className="video-card">
+            <video
+              src="/videos/video6.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video7.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
         </div>
       </section>
 
@@ -294,6 +324,34 @@ function App() {
       {/* FORMATOS DE PARCERIA */}
       <section className="partnership-section">
         <h2 className="section-title">FORMATOS DE PARCERIA</h2>
+
+        <div className="packages-grid">
+          <div className="package-card">
+            <span className="package-badge">Permuta</span>
+            <h3 className="package-title">Proposta por Permuta</h3>
+            <ul className="package-list">
+              <li><Check size={14} className="check-icon" /><span>1 Reels</span></li>
+              <li><Check size={14} className="check-icon" /><span>5 Stories</span></li>
+            </ul>
+            <p className="package-delivery">Entrega em até 3 dias</p>
+          </div>
+
+          <div className="package-card featured">
+            <span className="package-badge gold">Pacote Completo</span>
+            <h3 className="package-title">Reels + Stories + Feed</h3>
+            <ul className="package-list">
+              <li><Check size={14} className="check-icon" /><span>1 Reels</span></li>
+              <li><Check size={14} className="check-icon" /><span>10 Stories</span></li>
+              <li><Check size={14} className="check-icon" /><span>1 foto no feed</span></li>
+            </ul>
+            <p className="package-delivery">Entrega em até 3 dias</p>
+            <div className="package-price">
+              <span className="package-price-value">R$ 300,00</span>
+              <span className="package-price-note">via Pix</span>
+            </div>
+          </div>
+        </div>
+
         <div className="partnership-grid">
           {partnershipFormats.map(p => (
             <div key={p} className="partnership-item">
@@ -321,17 +379,17 @@ function App() {
             BEBLOOM
             <small>moda fitness</small>
           </div>
-          <div className="brand-card gpower">
+          <a className="brand-card gpower" href="https://www.instagram.com/gpowerimports" target="_blank" rel="noopener noreferrer">
             GPOWER
             <small>imports</small>
-          </div>
-          <div className="brand-card biscuit">
+          </a>
+          <a className="brand-card biscuit" href="https://www.instagram.com/biscuit.bolachas" target="_blank" rel="noopener noreferrer">
             BISCUIT
             <small>bolachas</small>
-          </div>
+          </a>
           <div className="brand-card emporium">
             EMPORIUMNUT
-            <small>loja de suplementação</small>
+            <small>suplementação</small>
           </div>
           <div className="brand-card bazinga">
             BAZINGA
@@ -341,6 +399,34 @@ function App() {
             RAAVI
             <small>dermocosmético</small>
           </div>
+          <a className="brand-card mercadao" href="https://www.instagram.com/mercadaodosoculosgovcelsoram" target="_blank" rel="noopener noreferrer">
+            MERCADÃO DO ÓCULOS
+            <small>ótica</small>
+          </a>
+          <a className="brand-card tatielu" href="https://www.instagram.com/otica_tatielu" target="_blank" rel="noopener noreferrer">
+            ÓCULOS TATI&LU
+            <small>ótica</small>
+          </a>
+          <a className="brand-card diabelle" href="https://www.instagram.com/diabelle.beleza" target="_blank" rel="noopener noreferrer">
+            DIABELLE
+            <small>estética e beleza</small>
+          </a>
+          <a className="brand-card onia" href="https://www.instagram.com/oniacosmeticos" target="_blank" rel="noopener noreferrer">
+            ÔNIA
+            <small>cosméticos</small>
+          </a>
+          <a className="brand-card aracetekono" href="https://www.instagram.com/araceteko" target="_blank" rel="noopener noreferrer">
+            ARACÊ TEKO
+            <small>parceria</small>
+          </a>
+          <a className="brand-card brunabeppler" href="https://www.instagram.com/estetica_brunabeppler" target="_blank" rel="noopener noreferrer">
+            BRUNA BEPPLER
+            <small>estética</small>
+          </a>
+          <a className="brand-card caramelo" href="https://play.google.com/store/apps/details?id=com.carameloclicker.app" target="_blank" rel="noopener noreferrer">
+            CACHORRO CARAMELO
+            <small>jogo</small>
+          </a>
         </div>
       </section>
 
@@ -348,7 +434,7 @@ function App() {
       <section className="contact-section">
         <div className="contact-cta">
           <h2>Vamos juntas?</h2>
-          <p>Mais que conteúdo, eu compartilho propósito.</p>
+          <p><Sparkles size={14} fill="currentColor" /> Vamos criar uma parceria que conecta, inspira e gera resultados? Estou esperando o seu contato! <Heart size={14} fill="currentColor" /></p>
         </div>
         <div className="contact-grid">
           <a
@@ -379,6 +465,7 @@ function App() {
           </div>
         </div>
         <button className="copy-email-btn" onClick={copyEmail}>
+          <Copy size={16} />
           {copyText}
         </button>
       </section>
