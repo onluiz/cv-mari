@@ -366,8 +366,9 @@ function App() {
       {/* PROPOSTA INICIAL */}
       <section className="proposal-section">
         <div className="proposal-content">
-          <p>Neste primeiro contato com as marcas, proponho iniciarmos através de uma <strong>parceria por permuta</strong>. Dessa forma, teremos a oportunidade de avaliar se existe uma conexão genuína entre a marca, o produto e o meu público, além de permitir que ambas as partes conheçam melhor o trabalho uma da outra.</p>
-          <p>Acredito que as melhores parcerias são construídas com <strong>autenticidade e confiança</strong>. Por isso, após essa etapa inicial e conforme formos crescendo juntos, podemos avaliar os resultados obtidos e negociar futuras ações e valores de forma alinhada e vantajosa para ambos.</p>
+          <p>Cristã, apaixonada por CrossFit, skincare e pelo universo feminino, compartilho meu dia a dia de forma leve, espontânea e verdadeira. Minha comunidade acompanha não apenas dicas e experiências, mas também uma <strong>história de superação</strong>.</p>
+          <p>Aos 21 anos, recebi o diagnóstico de <strong>diabetes tipo 1</strong> e, aos 29 anos, realizei a cirurgia bariátrica. Essas experiências mudaram minha vida e hoje fazem parte da minha missão: mostrar que é possível viver com saúde, autoestima, equilíbrio e alegria, sem deixar de aproveitar cada momento.</p>
+          <p>Meu conteúdo une lifestyle, bem-estar, beleza, rotina, treinos e autocuidado, sempre com uma linguagem próxima e humanizada. Mais do que divulgar produtos, gosto de criar experiências, gerando <strong>identificação, confiança e desejo</strong> de forma natural.</p>
         </div>
       </section>
 
@@ -375,10 +376,6 @@ function App() {
       <section className="brands-section">
         <h2 className="section-title">MARCAS QUE JÁ FAZEM PARTE</h2>
         <div className="brands-grid">
-          <div className="brand-card bebloom">
-            BEBLOOM
-            <small>moda fitness</small>
-          </div>
           <a className="brand-card gpower" href="https://www.instagram.com/gpowerimports" target="_blank" rel="noopener noreferrer">
             GPOWER
             <small>imports</small>
@@ -387,18 +384,6 @@ function App() {
             BISCUIT
             <small>bolachas</small>
           </a>
-          <div className="brand-card emporium">
-            EMPORIUMNUT
-            <small>suplementação</small>
-          </div>
-          <div className="brand-card bazinga">
-            BAZINGA
-            <small>dog house</small>
-          </div>
-          <div className="brand-card raavi">
-            RAAVI
-            <small>dermocosmético</small>
-          </div>
           <a className="brand-card mercadao" href="https://www.instagram.com/mercadaodosoculosgovcelsoram" target="_blank" rel="noopener noreferrer">
             MERCADÃO DO ÓCULOS
             <small>ótica</small>
