@@ -131,7 +131,7 @@ function App() {
           </div>
           <div className="number-card">
             <div className="number-icon"><Activity size={28} /></div>
-            <div className="number-value">5%+</div>
+            <div className="number-value">6,4%</div>
             <div className="number-label">ENGAJAMENTO MÉDIO</div>
           </div>
         </div>
@@ -210,6 +210,61 @@ function App() {
           <div className="video-card">
             <video
               src="/videos/raavi.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video1.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video2.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video3.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video4.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="reel-video"
+            />
+          </div>
+          <div className="video-card">
+            <video
+              src="/videos/video5.mp4"
               autoPlay
               muted
               loop
