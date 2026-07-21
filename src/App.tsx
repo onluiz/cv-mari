@@ -326,29 +326,13 @@ function App() {
         <h2 className="section-title">FORMATOS DE PARCERIA</h2>
 
         <div className="packages-grid">
-          <div className="package-card">
-            <span className="package-badge">Permuta</span>
-            <h3 className="package-title">Proposta por Permuta</h3>
-            <ul className="package-list">
-              <li><Check size={14} className="check-icon" /><span>1 Reels</span></li>
-              <li><Check size={14} className="check-icon" /><span>5 Stories</span></li>
-            </ul>
-            <p className="package-delivery">Entrega em até 3 dias</p>
-          </div>
-
           <div className="package-card featured">
-            <span className="package-badge gold">Pacote Completo</span>
-            <h3 className="package-title">Reels + Stories + Feed</h3>
-            <ul className="package-list">
-              <li><Check size={14} className="check-icon" /><span>1 Reels</span></li>
-              <li><Check size={14} className="check-icon" /><span>10 Stories</span></li>
-              <li><Check size={14} className="check-icon" /><span>1 foto no feed</span></li>
-            </ul>
+            <span className="package-badge gold">Permuta / A Combinar</span>
+            <h3 className="package-title">Permuta ou Valores a Combinar</h3>
+            <p className="package-description">
+              As parcerias podem ser realizadas via permuta de produtos e serviços ou com valores negociados de acordo com o escopo do projeto.
+            </p>
             <p className="package-delivery">Entrega em até 3 dias</p>
-            <div className="package-price">
-              <span className="package-price-value">R$ 300,00</span>
-              <span className="package-price-note">via Pix</span>
-            </div>
           </div>
         </div>
 

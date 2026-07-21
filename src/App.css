@@ -623,11 +623,11 @@ section {
 }
 
 .packages-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  max-width: 520px;
   margin: 0 auto 2rem;
+  width: 100%;
 }
 
 .package-card {
@@ -685,6 +685,13 @@ section {
   gap: 8px;
   font-size: 0.82rem;
   color: var(--gray);
+}
+
+.package-description {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin: 4px 0 8px;
 }
 
 .package-delivery {
